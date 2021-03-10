@@ -1,4 +1,6 @@
 const canvas = document.getElementById("draw");
+const button = document.querySelector("h2");
+
 /* get the rendering context and its drawing functions (получаем контекст визуализации и ее функции рисования) */
 const ctx = canvas.getContext("2d");
 /* set canvas size to window size */
@@ -15,7 +17,7 @@ let penWidth = 1;
 /* line color */
 let hue = 0;
 let lineDirection = true;
-/* drawing or not drawing */ 
+/* drawing or not drawing */
 let isDrawing = false;
 /* last position */
 let [lastX, lastY] = [0, 0];
@@ -36,7 +38,6 @@ const draw = (e) => {
     penWidth--;
   }
   ctx.lineWidth = penWidth;
-  console.log(penWidth);
 
   /* line color */
   if (hue >= 360) hue = 0;
@@ -50,4 +51,8 @@ canvas.addEventListener("mousedown", (e) => {
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
 canvas.addEventListener("mouseup", () => (isDrawing = false));
-canvas.addEventListener("mouseout", () => (isDrawing = false));
+
+
+button.addEventListener("click", () =>
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+);
