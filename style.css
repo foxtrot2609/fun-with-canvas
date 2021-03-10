@@ -1,0 +1,42 @@
+html {
+    margin: 0;
+}
+
+.page-title {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: -1000;
+}
+
+h1 {
+    animation: colored-words 60s infinite;
+}
+
+@keyframes colored-words {
+
+    0% {
+        color: rgb(14, 112, 165)
+    }
+
+    20% {
+        color: rgb(255, 0, 191)
+    }
+
+    40% {
+        color: rgb(255, 0, 0)
+    }
+
+    60% {
+        color: rgb(238, 202, 58)
+    }
+
+    80% {
+        color: rgb(9, 255, 0)
+    }
+
+    100% {
+        color: rgb(14, 112, 165);
+    }
+}
