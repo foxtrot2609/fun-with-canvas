@@ -2,6 +2,11 @@ html {
     margin: 0;
 }
 
+body {
+    font-family: 'Akronim', cursive;
+    font-size: 10px;
+}
+
 .page-title, .button {
     position: fixed;
     display: flex;
@@ -16,12 +21,14 @@ html {
 }
 
 h1 {
+    font-size: 3rem;
     animation: colored-words 60s infinite;
 }
 
 h2 {
+    font-size: 1.5rem;
     text-transform: uppercase;
-    color: rgb(59, 59, 59);;
+    color: rgb(85, 84, 84);;
     box-shadow: 0 0 1px 1px rgb(59, 59, 59);
     border-radius: 7px;
     margin: 0;
