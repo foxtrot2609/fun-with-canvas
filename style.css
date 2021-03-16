@@ -2,24 +2,35 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 body {
     font-family: 'Akronim', cursive;
     font-size: 10px;
+    width: 100vw;
+    height: 100vh;
 }
 
-.page-title, .button {
+.page-title {
     position: fixed;
+    z-index: -1000;
     display: flex;
     justify-content: center;
     width: 100%;
-    z-index: -1000;
 }
 
-.button {
-    bottom: 5%;
+.controls {
+    position: fixed;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 5%;
 }
 
 h1 {
@@ -27,27 +38,71 @@ h1 {
     animation: colored-words 60s infinite;
 }
 
-h2 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: rgb(85, 84, 84);;
-    box-shadow: 0 0 1px 1px rgb(59, 59, 59);
-    border-radius: 7px;
-    margin: 0;
-    padding: 10px 20px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+.button {
+    display: flex;
+    justify-content: center;
+    background: none;
+    border: none;
+    outline: none;
 }
 
-h2:hover {
+.btn-txt { 
+    width: 120px;
+    height: 35px;
+    font-family: 'Akronim', cursive;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: rgb(85, 84, 84);
+    box-shadow: 0 0 1px 1px rgb(59, 59, 59);
+    border-radius: 7px;
+}
+
+.fieldset {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0 2rem;
+    border-color: green;
+    border-radius: 7px;
+    color: green;
+    background-color: rgba(129, 238, 129, .7);
+}
+
+.manual {
+    text-align: center;
+}
+
+.color, .line-width {
+    margin: 0 1rem;
+}
+
+.auto {
+    color: green;
+    background-color: rgba(129, 238, 129, .7);
+}
+
+.off {
+    color: red;
+    border-color: red;
+    background-color: rgba(247, 140, 140, .7);
+}
+
+.btn-txt:hover, .color:hover {
     background-color: white;
     box-shadow: 4px 4px 8px 3px rgb(59, 59, 59);
 }
 
-h2:active {
+
+.color:focus, .line-width:focus {
+    outline: none;
+}
+
+.btn-txt:active {
     box-shadow: 0 0 1px 1px rgb(59, 59, 59);
 }
+
+
 
 @keyframes colored-words {
 
