@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Akronim&display=swap" rel="stylesheet">
+    <title>Fun with HTML5 Canvas</title>
+</head>
+
+<body>
+    <div class="page-title">
+        <h1>Fun with HTML5 Canvas</h1>
+    </div>
+
+
+    <form class="controls">
+        <button class="button" type="button">
+            <span class="btn-txt clear">clear</span>
+        </button>
+
+        <fieldset class="fieldset off">
+            <legend class="manual">manual settings (OFF)</legend>
+            <input class="color" type="color" data-ctx="strokeStyle">
+            <input class="line-width" type="range" data-ctx="lineWidth" min="1" max="100" step="2">
+        </fieldset>
+
+        <button class="button" type="button">
+            <span class="btn-txt auto">auto (on)</span>
+        </button>
+    </form>
+
+    <canvas id="draw"></canvas>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
